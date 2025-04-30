@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampaadana Building Materials | Gyaat</title>
+    <link rel="stylesheet" href="../gyaat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #16a085;
+            --secondary: #2c3e50;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+        
+        /* Materials Catalog */
+        .materials-catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .material-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .material-card:hover {
+            transform: translateY(-5px);
+        }
+        .material-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .material-info {
+            padding: 1.5rem;
+        }
+        .material-info h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .material-specs {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+        }
+        .spec-item {
+            text-align: center;
+        }
+        .spec-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        /* Quote Calculator */
+        .quote-calculator {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem auto;
+            max-width: 600px;
+        }
+        .calculator-results {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+         /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GYAAT</h1>
+                <p>Integrated Solutions</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="../commonPages/about.html">About</a></li>
+                    <li><a href="../commonPages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- <button class="cta-button">Get a Quote</button> -->
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Sampaadana Building Materials</h1>
+            <p>Premium materials for superior construction</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Product Catalog</h2>
+            
+            <div class="materials-catalog">
+                <div class="material-card">
+                    <div class="material-img" style="background-image: url('https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="material-info">
+                        <h3>Premium Tiles</h3>
+                        <p>Ceramic, porcelain, and natural stone options</p>
+                        <div class="material-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>20+ sizes</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-palette"></i>
+                                <span>50+ colors</span>
+                            </div>
+                        </div>
+                        <button class="cta-button" style="width: 100%;">Request Samples</button>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <div class="material-img" style="background-image: url('https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="material-info">
+                        <h3>Premium Tiles</h3>
+                        <p>Ceramic, porcelain, and natural stone options</p>
+                        <div class="material-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>20+ sizes</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-palette"></i>
+                                <span>50+ colors</span>
+                            </div>
+                        </div>
+                        <button class="cta-button" style="width: 100%;">Request Samples</button>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <div class="material-img" style="background-image: url('https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="material-info">
+                        <h3>Premium Tiles</h3>
+                        <p>Ceramic, porcelain, and natural stone options</p>
+                        <div class="material-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>20+ sizes</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-palette"></i>
+                                <span>50+ colors</span>
+                            </div>
+                        </div>
+                        <button class="cta-button" style="width: 100%;">Request Samples</button>
+                    </div>
+                </div>
+                <div class="material-card">
+                    <div class="material-img" style="background-image: url('https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="material-info">
+                        <h3>Premium Tiles</h3>
+                        <p>Ceramic, porcelain, and natural stone options</p>
+                        <div class="material-specs">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>20+ sizes</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-palette"></i>
+                                <span>50+ colors</span>
+                            </div>
+                        </div>
+                        <button class="cta-button" style="width: 100%;">Request Samples</button>
+                    </div>
+                </div>
+                
+                <!-- More material cards -->
+            </div>
+            
+            <!-- Material Quote Calculator -->
+            <div class="quote-calculator">
+                <h3><i class="fas fa-calculator"></i> Material Cost Estimator</h3>
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="material-type">Material Type</label>
+                        <select id="material-type" required>
+                            <option value="">Select material</option>
+                            <option value="tiles">Tiles</option>
+                            <option value="solar">Solar Systems</option>
+                            <option value="lifts">Elevators</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity (sq.ft/units)</label>
+                        <input type="number" id="quantity" min="1" required>
+                    </div>
+                    <button type="submit" class="cta-button">Calculate Estimate</button>
+                    
+                    <div class="calculator-results" id="quoteResults">
+                        <h4>Estimated Cost: <span id="estimatedCost">₹0</span></h4>
+                        <p>Includes GST and standard installation</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h2>GYAAT</h2>
+                <p>Integrated Real Estate Solutions</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="Aashray.html">Aashray Realty</a></li>
+                      <li><a href="Vriddhi.html">Vriddhi Loans</a></li>
+                      <li><a href="Siddhant.html">Siddhant Legal</a></li>
+                      <li><a href="Kalpa.html">Kalpa Design</a></li>
+                      <li><a href="Neeti.html">Neeti Security</a></li>
+                      <li><a href="Sampaadana.html">Sampaadana Materials</a></li>
+                      <li><a href="Manthan.html">Manthan Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../commonPages/about.html">About Us</a></li>
+                        <li><a href="../commonPages/contact.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Careers</a></li>
+                        <li><a href="#">Testimonials</a></li> -->
+                    </ul>
+
+                   
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+91 9876543210">+91 9876543210</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@gyaat.in">contact@gyaat.in</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nagpur, India</li>
+                        <li class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Gyaat Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Quote calculator
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const materialType = document.getElementById('material-type').value;
+            const quantity = document.getElementById('quantity').value;
+            
+            // Mock calculation
+            let rate = 0;
+            switch(materialType) {
+                case 'tiles': rate = 75; break;
+                case 'solar': rate = 12000; break;
+                case 'lifts': rate = 350000; break;
+            }
+            
+            const total = rate * quantity;
+            document.getElementById('estimatedCost').textContent = '₹' + total.toLocaleString();
+            document.getElementById('quoteResults').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

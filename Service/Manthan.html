@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manthan Consultancy | Gyaat</title>
+    <link rel="stylesheet" href="../gyaat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        :root {
+            --primary: #8e44ad;
+            --secondary: #2c3e50;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        }
+        
+        /* Project Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 3rem auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+            text-align: right;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::after {
+            right: -12px;
+        }
+        .right::after {
+            left: -12px;
+        }
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Consultation Booking */
+        .booking-calendar {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem auto;
+            max-width: 1000px;
+        }
+        .calendar-widget {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .time-slot {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .time-slot:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .time-slot.selected {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        /* slider */
+
+        .systems-slider {
+            margin: 3rem auto;
+            width: 100%;
+        }
+        .swiper {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+        }
+        .slide-content {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 1.5rem;
+            width: 100%;
+        }
+
+         /* Footer */
+         footer {
+            background: #1a252f;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GYAAT</h1>
+                <p>Integrated Solutions</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="../commonPages/about.html">About</a></li>
+                    <li><a href="../commonPages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- <button class="cta-button">Get a Quote</button> -->
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Manthan Consultancy</h1>
+            <p>From vision to reality - complete project execution</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Project Process</h2>
+            
+            <!-- Project Timeline -->
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Consultation</h3>
+                        <p>Needs assessment and feasibility study</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Planning</h3>
+                        <p>Detailed project blueprint creation</p>
+                    </div>
+                </div>
+                <!-- More timeline items -->
+            </div>
+            
+            <!-- Consultation Booking -->
+            <!-- <div class="booking-calendar">
+                <div class="calendar-widget">
+                    <h3>Book Consultation</h3>
+                    <div id="calendar"></div>
+                </div>
+                <div class="calendar-widget">
+                    <h3>Available Time Slots</h3>
+                    <div class="time-slots">
+                        <div class="time-slot">9:00 AM</div>
+                        <div class="time-slot">11:00 AM</div>
+                        <div class="time-slot">2:00 PM</div>
+                    </div>
+                    <button class="cta-button" style="width: 100%; margin-top: 1rem;">Confirm Booking</button>
+                </div>
+            </div> -->
+            
+            <!-- Project Gallery Slider -->
+            <div class="systems-slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                            <div class="slide-content">
+                                <h3>project One</h3>
+                                <p> Project Description</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                            <div class="slide-content">
+                                <h3>Access Control</h3>
+                                <p>Biometric and card-based entry systems</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h2>GYAAT</h2>
+                <p>Integrated Real Estate Solutions</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="Aashray.html">Aashray Realty</a></li>
+                      <li><a href="Vriddhi.html">Vriddhi Loans</a></li>
+                      <li><a href="Siddhant.html">Siddhant Legal</a></li>
+                      <li><a href="Kalpa.html">Kalpa Design</a></li>
+                      <li><a href="Neeti.html">Neeti Security</a></li>
+                      <li><a href="Sampaadana.html">Sampaadana Materials</a></li>
+                      <li><a href="Manthan.html">Manthan Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../commonPages/about.html">About Us</a></li>
+                        <li><a href="../commonPages/contact.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Careers</a></li>
+                        <li><a href="#">Testimonials</a></li> -->
+                    </ul>
+
+                   
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+91 9876543210">+91 9876543210</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@gyaat.in">contact@gyaat.in</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nagpur, India</li>
+                        <li class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Gyaat Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Time slot selection
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function() {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+        
+        // Simple calendar widget (would use a library like flatpickr in production)
+        const calendarHTML = `
+            <div class="calendar-header">
+                <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                <h4 id="current-month">June 2023</h4>
+                <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar-grid">
+                <div class="calendar-day">S</div><div class="calendar-day">M</div>
+                <!-- Full calendar grid would be generated by JS -->
+            </div>
+        `;
+        document.getElementById('calendar').innerHTML = calendarHTML;
+    </script>
+</body>
+</html>

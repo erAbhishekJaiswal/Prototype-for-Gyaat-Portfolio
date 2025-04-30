@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Gyaat</title>
+    <link rel="stylesheet" href="../gyaat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #3498db;
+            --light: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Header (Same as other pages) */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        /* Hero */
+        .contact-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 4rem 0;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-10px);
+        }
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 2rem auto;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .form-group input, 
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .form-submit {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-submit:hover {
+            background: #c0392b;
+        }
+        /* Map */
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 3rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GYAAT</h1>
+                <p>Integrated Solutions</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- <button class="cta-button">Get a Quote</button> -->
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>We're here to help and answer any questions you might have</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="contact-grid">
+            <a href="#map" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Our Office</h3>
+                <p>123 Business Avenue<br>Nagpur Railway Station 560001</p>
+            </a>
+            <a href="tel:9876543210" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>+91 9876543210<br>Mon-Fri: 9AM-6PM</p>
+            </a>
+            <a href="mailto:info@gyaat.in" class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>info@gyaat.in<br>support@gyaat.in</p>
+            </a>
+        </div>
+
+        <div class="contact-form">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service">
+                        <option value="">Select a service</option>
+                        <option value="realty">Aashray Realty</option>
+                        <option value="loans">Vriddhi Loans</option>
+                        <option value="legal">Siddhant Legal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.01307444704!2d77.5942773153461!3d12.9724149908565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf5df53c8e64b9c3e!2sBangalore%20Fort!5e0!3m2!1sen!2sin!4v1623930383963!5m2!1sen!2sin" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div> -->
+
+        <div id="map" class="map-container" style="border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 2rem 0;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.966053370722!2d79.0878703154026!3d21.15127198595441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0c3d6d7baf9%3A0x9078aa5aff1b93e4!2sNagpur%20Railway%20Station!5e0!3m2!1sen!2sin!4v1689345672349!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h2>GYAAT</h2>
+                <p>Integrated Real Estate Solutions</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../Service/Aashray.html">Aashray Realty</a></li>
+                        <li><a href="../Service/Vriddhi.html">Vriddhi Loans</a></li>
+                        <li><a href="../Service/Siddhant.html">Siddhant Legal</a></li>
+                        <li><a href="../Service/Kalpa.html">Kalpa Design</a></li>
+                        <li><a href="../Service/Neeti.html">Neeti Security</a></li>
+                        <li><a href="../Service/Sampaadana.html">Sampaadana Materials</a></li>
+                        <li><a href="../Service/Manthan.html">Manthan Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+91 9876543210">+91 9876543210</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:name@email.com">contact@gyaat.in</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nagpur, India</li>
+                        <li class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Gyaat Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

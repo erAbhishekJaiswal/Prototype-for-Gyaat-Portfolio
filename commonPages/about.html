@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Gyaat</title>
+    <link rel="stylesheet" href="../gyaat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #3498db;
+        }
+        /* Base styles same as Contact page */
+        
+        /* About Hero */
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        /* About Content */
+        .about-content {
+            padding: 4rem 0;
+        }
+        .about-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        /* Stats */
+        .stats {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .stat-item {
+            padding: 1.5rem;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        /* Team */
+        .team {
+            padding: 4rem 0;
+        }
+        .team h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        .member-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        .member-info {
+            padding: 1.5rem;
+        }
+        .member-info h3 {
+            margin: 0;
+            color: var(--primary);
+        }
+        .member-info p {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .member-social a {
+            color: var(--primary);
+            transition: color 0.3s;
+        }
+        .member-social a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GYAAT</h1>
+                <p>Integrated Solutions</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- <button class="cta-button">Get a Quote</button> -->
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Building trust through integrated real estate solutions since 2010</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="about-content">
+            <div class="about-section">
+                <div class="about-text">
+                    <h2>Who We Are</h2>
+                    <p>Gyaat is a leading integrated real estate services provider, offering end-to-end solutions from property acquisition to construction and financing. Founded in Bangalore, we've grown to serve clients across South India with our comprehensive suite of services.</p>
+                    <p>Our team of 150+ professionals brings together expertise across real estate, legal, finance, and design disciplines to deliver seamless experiences for our clients.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Gyaat Office">
+                </div>
+            </div>
+
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our Mission">
+                </div>
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>To simplify real estate transactions through integrated services that cover every aspect of property ownership and development. We believe in:</p>
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li><i class="fas fa-check" style="color: var(--secondary);"></i> Transparency in all dealings</li>
+                        <li><i class="fas fa-check" style="color: var(--secondary);"></i> Client-first approach</li>
+                        <li><i class="fas fa-check" style="color: var(--secondary);"></i> Innovation in service delivery</li>
+                        <li><i class="fas fa-check" style="color: var(--secondary);"></i> Ethical business practices</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Years in Business</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Professionals</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Integrated Services</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="team">
+            <h2>Meet Our Leadership</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="member-info">
+                        <h3>Rahul Sharma</h3>
+                        <p>Founder & CEO</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="member-info">
+                        <h3>Priya Patel</h3>
+                        <p>Director, Operations</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+                    <div class="member-info">
+                        <h3>Vikram Mehta</h3>
+                        <p>Head, Legal Services</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h2>GYAAT</h2>
+                <p>Integrated Real Estate Solutions</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../Service/Aashray.html">Aashray Realty</a></li>
+                        <li><a href="../Service/Vriddhi.html">Vriddhi Loans</a></li>
+                        <li><a href="../Service/Siddhant.html">Siddhant Legal</a></li>
+                        <li><a href="../Service/Kalpa.html">Kalpa Design</a></li>
+                        <li><a href="../Service/Neeti.html">Neeti Security</a></li>
+                        <li><a href="../Service/Sampaadana.html">Sampaadana Materials</a></li>
+                        <li><a href="../Service/Manthan.html">Manthan Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Testimonials</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+91 9876543210">+91 9876543210</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@gyaat.in">contact@gyaat.in</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nagpur, India</li>
+                        <li class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Gyaat Company. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
